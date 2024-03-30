@@ -2,6 +2,8 @@ body {
     width: 300px;
     padding: 10px;
     font-family: Arial, sans-serif;
+    color: rgb(252, 246, 237);
+    background-color: black;
   }
   
   #notesList div {
