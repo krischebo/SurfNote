@@ -5,7 +5,8 @@
   "description": "Quick and simple note-taking while web surfing!",
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "activeTabs"
   ],
   "icons": {
     "64": "assets/icon64.png",
