@@ -32,7 +32,9 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "src/notes.html"
+        "src/notes.html",
+        "images/delete-icon.png",
+        "images/copy-icon.png"
       ],
       "matches": [
         "<all_urls>"

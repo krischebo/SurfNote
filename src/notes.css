@@ -1,27 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    color: rgb(252, 246, 237);
-    background-color: black;
-    padding: 10%;
-  }
-  
-  h1 {
-    text-align: center;
-    color: white;
-  }
-  
-  #notesList div {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #222222;
-    border-radius: 5px;
-  }
-  
-  #notesList div:hover {
-    background-color: #404040;
-  }
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: rgb(252, 246, 237);
+  background-color: black;
+  padding: 5%;
+  line-height: 1.5;
+}
 
-  
+h1 {
+  text-align: center;
+  color: white;
+}
 
-  
+.note-item-container {
+  margin-bottom: 20px;
+  padding: 1%;
+  background-color: #222222;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-item-container:hover {
+  background-color: #404040;
+}
+
+.note-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.note-buttons button {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.note-buttons button:hover {
+  background-color: #555;
+}
+
+.custom-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.custom-button:hover {
+  background-color: #555; /* Change background color on hover */
+}

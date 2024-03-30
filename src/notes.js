@@ -7,31 +7,59 @@ document.addEventListener('DOMContentLoaded', function() {
     notesList.innerHTML = '';
 
     notes.forEach(function(note, index) {
-      const noteItem = document.createElement('li');
+      // Create a container for the note item
+      const noteItemContainer = document.createElement('div');
+      noteItemContainer.classList.add('note-item-container'); // Add a CSS class for styling if needed
 
       // Display the note text
-      noteItem.textContent = note.text + ' (Saved on ' + note.timestamp + ')';
-
+      const noteText = document.createElement('div');
+      noteText.textContent = note.text + ' (Saved on ' + note.timestamp + ')';
+      noteItemContainer.appendChild(noteText);
+      
       // Create a delete button
-      const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Delete';
+      const deleteButton = document.createElement('img');
+      deleteButton.src = 'assets/delete-icon.png'; // Replace with your PNG image path
+      deleteButton.alt = 'Delete';
+      deleteButton.classList.add('custom-button'); // Add custom class to the button
       deleteButton.addEventListener('click', function() {
         deleteNote(index); // Call deleteNote function when the button is clicked
       });
-      noteItem.appendChild(deleteButton);
+      noteItemContainer.appendChild(deleteButton);
+
+      // Create a copy button
+      const copyButton = document.createElement('img');
+      copyButton.src = 'assets/copy-icon.png'; // Replace with your PNG image path
+      copyButton.alt = 'Copy';
+      copyButton.classList.add('custom-button'); // Add custom class to the button
+      copyButton.addEventListener('click', function() {
+        copyToClipboard(note.text); // Call copyToClipboard function when the button is clicked
+      });
+      noteItemContainer.appendChild(copyButton);
+      /*
+      // Create a delete button
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('custom-button'); // Add custom class to the button
+      deleteButton.addEventListener('click', function() {
+        deleteNote(index); // Call deleteNote function when the button is clicked
+      });
+      noteItemContainer.appendChild(deleteButton);
 
       // Create a copy button
       const copyButton = document.createElement('button');
       copyButton.textContent = 'Copy';
+      copyButton.classList.add('custom-button'); // Add custom class to the button
       copyButton.addEventListener('click', function() {
         copyToClipboard(note.text); // Call copyToClipboard function when the button is clicked
       });
-      noteItem.appendChild(copyButton);
-
-      notesList.appendChild(noteItem);
+      noteItemContainer.appendChild(copyButton);
+      */
+      // Append the note item container to the notes list
+      notesList.appendChild(noteItemContainer);
     });
   });
 });
+
 
 // Function to delete a note from storage and update UI
 function deleteNote(index) {
