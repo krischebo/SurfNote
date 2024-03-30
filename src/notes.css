@@ -2,7 +2,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
   color: rgb(252, 246, 237);
-  background-color: black;
+  background-color: #2c3531;
   padding: 5%;
   line-height: 1.5;
 }
@@ -15,7 +15,7 @@ h1 {
 .note-item-container {
   margin-bottom: 20px;
   padding: 1%;
-  background-color: #222222;
+  background-color: rgb(42, 42, 42);
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -37,21 +37,32 @@ h1 {
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
+  
+  justify-content: flex-end;
 }
 
 .note-buttons button:hover {
-  background-color: #555;
+  background-color: #4c4c4c;
 }
 
 .custom-button {
-  background-color: #333;
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 8px 20px;
+  border-radius: 10px;
   cursor: pointer; /* Change cursor on hover */
+  justify-content: flex-end;
 }
 
 .custom-button:hover {
-  background-color: #555; /* Change background color on hover */
+  background-color: #242424; /* Change background color on hover */
+}
+
+.website-link {
+  color: lightgreen; /* Change the color to your desired color */
+  text-decoration: underline; /* Add underline to the link text */
+}
+
+.website-link:hover {
+  color: rgb(230, 249, 220); /* Change the color on hover if needed */
 }

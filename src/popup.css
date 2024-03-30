@@ -1,24 +1,38 @@
 body {
-    width: 300px;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-    color: rgb(252, 246, 237);
-    background-color: black;
-  }
-  
-  #notesList div {
-    margin-bottom: 5px;
-  }
-  
-  .custom-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer; /* Change cursor on hover */
-  }
-  
-  .custom-button:hover {
-    background-color: #555; /* Change background color on hover */
-  }
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  color: rgb(252, 246, 237);
+  background-color: #242424;
+}
+
+#notesList div {
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.custom-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.custom-button {
+  background-color: #d8d8cc;
+  color: #242424;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #afafaa;
+}

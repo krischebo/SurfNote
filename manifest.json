@@ -2,15 +2,14 @@
   "manifest_version": 3,
   "name": "SurfNote",
   "version": "1.0",
-  "description": "Quick and simple note-taking while web surfing!",
+  "description": "Quick and simple note-taking while web surfing.",
   "permissions": [
     "tabs",
     "storage",
     "activeTabs"
   ],
   "icons": {
-    "64": "assets/icon64.png",
-    "128": "assets/icon128.png"
+    "64": "src/assets/surf-icon64.png"
   },
   "background": {
     "service_worker": "background.js"
@@ -27,14 +26,15 @@
   ],
   "action": {
     "default_popup": "src/popup.html",
-    "default_icon": "assets/icon64.png"
+    "default_icon": "src/assets/surf-icon64.png"
   },
   "web_accessible_resources": [
     {
       "resources": [
         "src/notes.html",
-        "images/delete-icon.png",
-        "images/copy-icon.png"
+        "src/assets/delete-icon.png",
+        "src/assets/copy-icon.png",
+        "src/assets/save-icon.png"
       ],
       "matches": [
         "<all_urls>"

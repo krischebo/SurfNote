@@ -8,7 +8,7 @@ function createFloatingButton(text, clientX, clientY) {
   saveButton.style.border = 'none';
   saveButton.style.padding = '8px 16px';
   saveButton.style.borderRadius = '5px';
-
+ 
   // Set button position near the cursor
   saveButton.style.top = (clientY - saveButton.offsetHeight - 10) + 'px'; // Adjust the offset as needed
   saveButton.style.left = (clientX + 10) + 'px'; // Adjust the offset as needed
