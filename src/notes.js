@@ -1,12 +1,57 @@
 document.addEventListener('DOMContentLoaded', function() {
+  const notesList = document.getElementById('notesList');
+
+  // Fetch and display notes from local storage
   chrome.storage.local.get('notes', function(data) {
     const notes = data.notes || [];
-    const notesList = document.getElementById('notesList');
     notesList.innerHTML = '';
-    notes.forEach(function(note) {
-      const noteElement = document.createElement('div');
-      noteElement.textContent = note.text + ' (Saved on ' + note.timestamp + ')';
-      notesList.appendChild(noteElement);
+
+    notes.forEach(function(note, index) {
+      const noteItem = document.createElement('li');
+
+      // Display the note text
+      noteItem.textContent = note.text + ' (Saved on ' + note.timestamp + ')';
+
+      // Create a delete button
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.addEventListener('click', function() {
+        deleteNote(index); // Call deleteNote function when the button is clicked
+      });
+      noteItem.appendChild(deleteButton);
+
+      // Create a copy button
+      const copyButton = document.createElement('button');
+      copyButton.textContent = 'Copy';
+      copyButton.addEventListener('click', function() {
+        copyToClipboard(note.text); // Call copyToClipboard function when the button is clicked
+      });
+      noteItem.appendChild(copyButton);
+
+      notesList.appendChild(noteItem);
     });
   });
 });
+
+// Function to delete a note from storage and update UI
+function deleteNote(index) {
+  chrome.storage.local.get('notes', function(data) {
+    const notes = data.notes || [];
+    notes.splice(index, 1); // Remove the note at the specified index
+    chrome.storage.local.set({ notes: notes }, function() {
+      // Update the UI after deleting the note
+      location.reload(); // Reload the page to reflect the changes
+    });
+  });
+}
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+  const tempInput = document.createElement('input');
+  document.body.appendChild(tempInput);
+  tempInput.value = text;
+  tempInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempInput);
+  alert('Note copied to clipboard!');
+}
