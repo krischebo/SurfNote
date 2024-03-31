@@ -11,5 +11,8 @@ document.addEventListener('keydown', function(event) {
         }
       });
     }
+    if (selectedText == '') {
+      alert('Selection is not detected. If text is selected, this website is not compatible.');
+    }
   }
 });
