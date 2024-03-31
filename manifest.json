@@ -6,7 +6,7 @@
   "permissions": [
     "tabs",
     "storage",
-    "activeTabs"
+    "activeTab"
   ],
   "icons": {
     "64": "src/assets/surf-icon64.png"
