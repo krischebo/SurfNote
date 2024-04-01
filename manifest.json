@@ -4,9 +4,7 @@
   "version": "1.0",
   "description": "Quick and simple note-taking while web surfing.",
   "permissions": [
-    "tabs",
-    "storage",
-    "activeTab"
+    "storage"
   ],
   "icons": {
     "64": "src/assets/surf-icon64.png"
