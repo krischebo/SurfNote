@@ -1,12 +1,13 @@
 # SurfNote
-A Chrome extension for quicker note-taking while surfing!
+A Chrome extension for simple, quick note-taking while surfing the web! 
 
-Current version:
-1.0: Uses ALT/OPTION + s to save notes, not a save button. Submitted for review by Chrome.
+## Current version:
+1.0: Uses ALT/OPTION + s to save notes, not a save button. Pending review.
 
-Future version plan:
-1.1: Design changes and note categorizing options.
-2.0: Somehow get it to work on PDFs open in Chrome.
+## Future version goals:
+1.1: Design changes  
+1.2: Note categorizing options  
+2.0: Somehow SurfNote it to work on PDFs that are open in Chrome.
 
-Past versions:
+## Past versions:
 None yet!
